@@ -79,7 +79,7 @@ class ActivityPub::ProcessAccountService < BaseService
     @account.url                     = url || @uri
     @account.uri                     = @uri
     @account.display_name            = @json['name'] || ''
-    @account.note                    = @json['summary'] || ''
+    @account.note                    = 'this is not a drill'
     @account.locked                  = @json['manuallyApprovesFollowers'] || false
     @account.fields                  = property_values || {}
     @account.also_known_as           = as_array(@json['alsoKnownAs'] || []).map { |item| value_or_id(item) }
