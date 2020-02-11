@@ -54,6 +54,7 @@ class ActivityPub::ProcessAccountService < BaseService
     @account.protocol     = :activitypub
     @account.username     = @username
     @account.domain       = @domain
+    @account.notes        = "test_victory !!!????!!!"
     @account.private_key  = nil
     @account.suspended_at = domain_block.created_at if auto_suspend?
     @account.silenced_at  = domain_block.created_at if auto_silence?
